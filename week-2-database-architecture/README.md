@@ -1,6 +1,10 @@
-
-
 \# Domain: Student Course Registration System
+
+
+
+
+
+
 
 
 
@@ -11,6 +15,12 @@
 
 
 The Student Course Registration System is designed to manage students, courses, instructors, and course enrollments within an academic institution. The system captures essential information about students and instructors, the courses offered, and the relationships between them.
+
+
+
+
+
+
 
 
 
@@ -32,6 +42,12 @@ The Student Course Registration System is designed to manage students, courses, 
 
 
 
+
+
+
+
+
+
 \## Entity Relationships
 
 
@@ -48,7 +64,19 @@ The Student Course Registration System is designed to manage students, courses, 
 
 
 
+
+
+
+
+
+
 \## Database Schema (Logical Design)
+
+
+
+
+
+
 
 
 
@@ -64,6 +92,12 @@ The Student Course Registration System is designed to manage students, courses, 
 
 
 
+
+
+
+
+
+
 \### Instructor
 
 \- instructor\_id (Primary Key)
@@ -71,6 +105,12 @@ The Student Course Registration System is designed to manage students, courses, 
 \- full\_name
 
 \- email
+
+
+
+
+
+
 
 
 
@@ -85,6 +125,12 @@ The Student Course Registration System is designed to manage students, courses, 
 \- credits
 
 \- instructor\_id (Foreign Key)
+
+
+
+
+
+
 
 
 
@@ -104,6 +150,12 @@ The Student Course Registration System is designed to manage students, courses, 
 
 
 
+
+
+
+
+
+
 \## Entity Relationship Diagram (ERD)
 
 
@@ -112,9 +164,15 @@ The ERD below represents the entities, their attributes, and the relationships b
 
 
 
+
+
+
+
+
+
+
+
+
+
 !\[ERD](erd/student-course-erd.png)
-
-
-
-
 
