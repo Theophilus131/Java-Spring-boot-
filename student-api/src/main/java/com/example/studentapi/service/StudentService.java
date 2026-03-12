@@ -5,6 +5,8 @@ import com.example.studentapi.model.Student;
 import com.example.studentapi.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentService {
 
@@ -25,12 +27,25 @@ public class StudentService {
                 .orElseThrow(() -> new ResourceNotFoundException("Student not found"));
     }
 
-    public Iterable<Student> getAllStudents(){
+    public Student updateStudent(Long id, Student updatedStudent){
+        Student existingStudent = getStudentById(id);
+
+        existingStudent.setName(updatedStudent.getName());
+        existingStudent.setEmail(updatedStudent.getEmail());
+        existingStudent.setCourse(updatedStudent.getCourse());
+
+        return studentRepository.save(existingStudent);
+    }
+
+    public List<Student> getAllStudents(){
+
         return studentRepository.findAll();
     }
 
     public void deleteStudentById(Long id){
-        studentRepository.deleteById(id);
+        Student existingStudent = getStudentById(id);
+        studentRepository.delete(existingStudent);
+
     }
 
 
